@@ -75,6 +75,19 @@ It suggests an item based on items the user has previously consumed. It looks fo
 @@ But how to find similar items? and what if there are multiple similar items in that case which item to suggest first? @@
 ```
 
+#### Limitations of collaborative System
+
+* Data sparsity: Data sparsity happens when you have a large data set of users who generally rate only a limited number of items. Collaborative based recommenders can only predict scoring of an item if there are other users who have rated it.Due to sparsity, we might not have enough ratings in the user item dataset which makes it impossible to provide proper recommendations.
+
+* Cold start: Another issue to keep in mind is something called cold start.Cold start refers to the difficulty the recommendation system has when there is a new user,
+and as such a profile doesn't exist for them yet. Cold start can also happen when we have a new item which has not received a rating.
+
+* Scalability: Scalability can become an issue as well.As the number of users or items increases and the amount of data expands,collaborative filtering algorithms will begin to suffer drops in performance, simply due to growth and the similarity computation.
+
+There are some solutions for each of these challenges such as using hybrid based recommender systems.
+
+
+
 ## Challenges with recommender systems
 
 Taking advantage of the "wisdom of crowds" (with collaborative filtering) has been made simpler with the data-collection opportunities the web affords. But the massive amounts of available data also complicate this opportunity. For example, although some users' behavior can be modeled, other users do not exhibit typical behavior. These users can skew the results of a recommender system and decrease its efficiency. Further, users can exploit a recommender system to favor one product over another — based on positive feedback on a product and negative feedback on competitive products, for example. A good recommender system must manage these issues.
