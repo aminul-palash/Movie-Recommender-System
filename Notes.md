@@ -1,4 +1,4 @@
-# Movie-Recommender-System
+# Recommender System Notes
 
 ![Python](https://img.shields.io/badge/Python-3.6-blueviolet)
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
