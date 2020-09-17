@@ -44,7 +44,7 @@ User-based collaborative filtering is based on the user similarity or neighborho
 
    ![](Images/collaborative.png)
    
-   Image taken from [coursera.org](https://www.coursera.org/learn/machine-learning-with-python)
+   > Image taken from [coursera.org](https://www.coursera.org/learn/machine-learning-with-python)
 
 For example, movies that similar users have rated highly. Then it uses the ratings from these similar users to predict the possible ratings by the active user for a movie that she had not previously watched. For instance, if two users are similar or are neighbors in terms of their interested movies, we can recommend a movie to the active user that her neighbor has already seen.
 
