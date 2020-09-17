@@ -29,7 +29,9 @@ Also, there are Hybrid recommender systems, which combine various mechanisms. In
 
 A Content-based recommendation system tries to recommend items to users based on their profile. The user's profile revolves around that user's preferences and tastes. It is shaped based on user ratings, including the number of times that user has clicked on different items or perhaps even liked those items. The recommendation process is based on the similarity between those items. Similarity or closeness of items is measured based on the similarity in the content of those items.
 
-
+![](Images/content-base.png)
+   
+   > Image taken from [coursera.org](https://www.coursera.org/learn/machine-learning-with-python)
 
 
 
