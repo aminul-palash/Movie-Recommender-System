@@ -33,9 +33,12 @@ A Content-based recommendation system tries to recommend items to users based on
    
    > Image taken from [coursera.org](https://www.coursera.org/learn/machine-learning-with-python)
 
+If the user has watched and rated three movies so far and she has given a rating of two out of 10 to the first movie, 10 out of 10 to the second movie and eight out of 10 to the third. The task of the recommender engine is to recommend one of the three candidate movies to this user, or in other, words we want to predict what the user's possible rating would be of the three candidate movies if she were to watch them. 
 
-
-
+```diff
+! Limitaion
+```
+Content-based filtering has a limitation on the quality of the description provided by the content provider. Technically, there is a limitation of what features can be extracted from the limited amount of content information. Extracting “content” information from the user is hard too. In reality, it is easier to judge people by what they do than what they say. Behavior information, like what they view, how they rate items, is much easier to collect, less intrusive and more accurate.
 
 
 ## Collaborative filtering methods
