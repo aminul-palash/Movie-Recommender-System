@@ -34,9 +34,13 @@ For example, suppose you're building a website to recommend blogs. By using the 
 
 Collaborative filtering has basically two approaches:
 
-* User-based: User-based collaborative filtering is based on the user similarity or neighborhood.
+* User-based
 
 * Item-based: Item-based collaborative filtering is based on similarity among items. 
+
+## User based collaborative filtering
+
+User-based collaborative filtering is based on the user similarity or neighborhood. In user-based collaborative filtering, we have an active user for whom the recommendation is aimed. The collaborative filtering engine first looks for users who are similar. That is users who share the active users rating patterns. Collaborative filtering basis this similarity on things like history,preference, and choices that users make when buying, watching, or enjoying something. For example, movies that similar users have rated highly. Then it uses the ratings from these similar users to predict the possible ratings by the active user for a movie that she had not previously watched. For instance, if two users are similar or are neighbors in terms of their interested movies, we can recommend a movie to the active user that her neighbor has already seen.
 
 
 
