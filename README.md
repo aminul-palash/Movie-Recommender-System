@@ -84,7 +84,7 @@ and as such a profile doesn't exist for them yet. Cold start can also happen whe
 
 * Scalability: Scalability can become an issue as well.As the number of users or items increases and the amount of data expands,collaborative filtering algorithms will begin to suffer drops in performance, simply due to growth and the similarity computation.
 
-There are some solutions for each of these challenges such as using hybrid based recommender systems. These methods, that combine collaborative filtering and content based approaches, achieves state-of-the-art results in many cases and are, so, used in many large scale recommender systems nowadays. The combination made in hybrid approaches can mainly take two forms: we can either train two models independently (one collaborative filtering model and one content based model) and combine their suggestions or directly build a single model (often a neural network) that unify both approaches by using as inputs prior information (about user and/or item) as well as “collaborative” interactions information.
+** There are some solutions for each of these challenges such as using hybrid based recommender systems. These methods, that combine collaborative filtering and content based approaches, achieves state-of-the-art results in many cases and are, so, used in many large scale recommender systems nowadays. The combination made in hybrid approaches can mainly take two forms: we can either train two models independently (one collaborative filtering model and one content based model) and combine their suggestions or directly build a single model (often a neural network) that unify both approaches by using as inputs prior information (about user and/or item) as well as “collaborative” interactions information.
 
 
 
