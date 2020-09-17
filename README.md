@@ -28,10 +28,15 @@ Also, there are Hybrid recommender systems, which combine various mechanisms. In
 
 ## Collaborative filtering methods
 
-Collaborative filtering is based on a user saying, “Tell me what's popular among my neighbors because I might like it too.” Collaborative filtering techniques find similar groups of users, and provide recommendations based on similar tastes within that group. In short, it assumes that a user might be interested in what similar users are interested in. 
+Collaborative filtering is based on the fact that relationships exist between products and people's interests. Collaborative filtering is based on a user saying, “Tell me what's popular among my neighbors because I might like it too.” Collaborative filtering techniques find similar groups of users, and provide recommendations based on similar tastes within that group. In short, it assumes that a user might be interested in what similar users are interested in. 
 
 For example, suppose you're building a website to recommend blogs. By using the information from many users who subscribe to and read blogs, you can group those users based on their preferences. For example, you can group together users who read several of the same blogs. From this information, you identify the most popular blogs that are read by that group. Then — for a particular user in the group — you recommend the most popular blog that he or she neither reads nor subscribes to. 
 
+Collaborative filtering has basically two approaches:
+
+* User-based: User-based collaborative filtering is based on the user similarity or neighborhood.
+
+* Item-based: Item-based collaborative filtering is based on similarity among items. 
 
 
 
