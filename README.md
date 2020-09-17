@@ -14,8 +14,8 @@ For example, if you’ve recently purchased a book on Machine Learning in Python
 
 The purpose of a recommender system is to suggest relevant items to users. There are generally 2 main types of recommendation systems:
 
-* Content-based and 
-* Collaborative filtering.
+* <b> Content-based </b> and 
+* <b>Collaborative filtering.</b>
 
 Also, there are Hybrid recommender systems, which combine various mechanisms. In terms of implementing recommender systems, there are 2 types: 
 * memory based 
@@ -51,9 +51,9 @@ For example, suppose you're building a website to recommend blogs. By using the 
 
 Collaborative filtering has basically two approaches:
 
-* User-based
+* <b>User-based</b>
 
-* Item-based
+* <b>Item-based</b>
 
 ### User based collaborative filtering
 
@@ -77,14 +77,14 @@ It suggests an item based on items the user has previously consumed. It looks fo
 
 #### Limitations of collaborative System
 
-* Data sparsity: Data sparsity happens when you have a large data set of users who generally rate only a limited number of items. Collaborative based recommenders can only predict scoring of an item if there are other users who have rated it.Due to sparsity, we might not have enough ratings in the user item dataset which makes it impossible to provide proper recommendations.
+* <b>Data sparsity:</b> Data sparsity happens when you have a large data set of users who generally rate only a limited number of items. Collaborative based recommenders can only predict scoring of an item if there are other users who have rated it.Due to sparsity, we might not have enough ratings in the user item dataset which makes it impossible to provide proper recommendations.
 
-* Cold start: Another issue to keep in mind is something called cold start.Cold start refers to the difficulty the recommendation system has when there is a new user,
+* <b>Cold start:</b> Another issue to keep in mind is something called cold start.Cold start refers to the difficulty the recommendation system has when there is a new user,
 and as such a profile doesn't exist for them yet. Cold start can also happen when we have a new item which has not received a rating.
 
-* Scalability: Scalability can become an issue as well.As the number of users or items increases and the amount of data expands,collaborative filtering algorithms will begin to suffer drops in performance, simply due to growth and the similarity computation.
+* <b>Scalability:</b> Scalability can become an issue as well.As the number of users or items increases and the amount of data expands,collaborative filtering algorithms will begin to suffer drops in performance, simply due to growth and the similarity computation.
 
-** There are some solutions for each of these challenges such as using <b> hybrid based recommender systems</b>. These methods, that combine collaborative filtering and content based approaches, achieves state-of-the-art results in many cases and are, so, used in many large scale recommender systems nowadays. The combination made in hybrid approaches can mainly take two forms: we can either train two models independently (one collaborative filtering model and one content based model) and combine their suggestions or directly build a single model (often a neural network) that unify both approaches by using as inputs prior information (about user and/or item) as well as “collaborative” interactions information.
+<b>Solution: </b> There are some solutions for each of these challenges such as using <b> hybrid based recommender systems</b>. These methods, that combine collaborative filtering and content based approaches, achieves state-of-the-art results in many cases and are, so, used in many large scale recommender systems nowadays. The combination made in hybrid approaches can mainly take two forms: we can either train two models independently (one collaborative filtering model and one content based model) and combine their suggestions or directly build a single model (often a neural network) that unify both approaches by using as inputs prior information (about user and/or item) as well as “collaborative” interactions information.
 
 
 
