@@ -25,6 +25,16 @@ Also, there are Hybrid recommender systems, which combine various mechanisms. In
 
 > In model-based approaches, a model of users is developed in an attempt to learn their preferences. Models can be created using Machine Learning techniques like regression, clustering, classification, and so on. 
 
+## Content-based filtering
+
+A Content-based recommendation system tries to recommend items to users based on their profile. The user's profile revolves around that user's preferences and tastes. It is shaped based on user ratings, including the number of times that user has clicked on different items or perhaps even liked those items. The recommendation process is based on the similarity between those items. Similarity or closeness of items is measured based on the similarity in the content of those items.
+
+
+
+
+
+
+
 
 ## Collaborative filtering methods
 
@@ -62,5 +72,6 @@ It suggests an item based on items the user has previously consumed. It looks fo
 * https://www.ibm.com/developerworks/library/os-recommender1/index.html
 * https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada
 * https://towardsdatascience.com/comprehensive-guide-on-item-based-recommendation-systems-d67e40e2b75d
+* https://medium.com/@jonathan_hui/machine-learning-recommender-system-e3237b9df14a
 
 
