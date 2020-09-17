@@ -36,9 +36,9 @@ Collaborative filtering has basically two approaches:
 
 * User-based
 
-* Item-based: Item-based collaborative filtering is based on similarity among items. 
+* Item-based
 
-## User based collaborative filtering
+### User based collaborative filtering
 
 User-based collaborative filtering is based on the user similarity or neighborhood. In user-based collaborative filtering, we have an active user for whom the recommendation is aimed. The collaborative filtering engine first looks for users who are similar. That is users who share the active users rating patterns. Collaborative filtering basis this similarity on things like history,preference, and choices that users make when buying, watching, or enjoying something.
 
@@ -48,13 +48,19 @@ User-based collaborative filtering is based on the user similarity or neighborho
 
 For example, movies that similar users have rated highly. Then it uses the ratings from these similar users to predict the possible ratings by the active user for a movie that she had not previously watched. For instance, if two users are similar or are neighbors in terms of their interested movies, we can recommend a movie to the active user that her neighbor has already seen.
 
+### Item based collaborative filtering
 
+Item-based collaborative filtering is based on similarity among items.Item-item collaborative filtering is one kind of recommendation method which looks for similar items based on the items users have already liked or positively interacted with.Two items are considered to be similar if most of the users that have interacted with both of them did it in a similar way. It was developed by Amazon in 1998 and plays a great role in Amazon’s success.
 
+It suggests an item based on items the user has previously consumed. It looks for the items the user has consumed then it finds other items similar to consumed items and recommends accordingly.
 
+#### But how to find similar items? and what if there are multiple similar items in that case which item to suggest first? 
 
 ### References
 
 * https://www.coursera.org/learn/machine-learning-with-python 
 * https://www.ibm.com/developerworks/library/os-recommender1/index.html
 * https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada
+* https://towardsdatascience.com/comprehensive-guide-on-item-based-recommendation-systems-d67e40e2b75d
+
 
