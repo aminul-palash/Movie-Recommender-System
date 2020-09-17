@@ -37,8 +37,9 @@ If the user has watched and rated three movies so far and she has given a rating
 
 ```diff
 ! Limitaion
-```
 Content-based filtering has a limitation on the quality of the description provided by the content provider. Technically, there is a limitation of what features can be extracted from the limited amount of content information. Extracting “content” information from the user is hard too. In reality, it is easier to judge people by what they do than what they say. Behavior information, like what they view, how they rate items, is much easier to collect, less intrusive and more accurate.
+```
+
 
 
 ## Collaborative filtering methods
