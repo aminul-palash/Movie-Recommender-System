@@ -12,19 +12,32 @@ For example, if you’ve recently purchased a book on Machine Learning in Python
 
 ## Types of Recommendar System
 
-The purpose of a recommender system is to suggest relevant items to users. There are generally 2 main types of recommendation systems: 
+The purpose of a recommender system is to suggest relevant items to users. There are generally 2 main types of recommendation systems:
+
 * Content-based and 
 * Collaborative filtering.
 
-## Collaborative filtering methods
-
-Collaborative filtering is based on a user saying, “Tell me what's popular among my neighbors because I might like it too.” Collaborative filtering techniques find similar groups of users, and provide recommendations based on similar tastes within that group. In short, it assumes that a user might be interested in what similar users are interested in. 
-For example, suppose you're building a website to recommend blogs. By using the information from many users who subscribe to and read blogs, you can group those users based on their preferences. For example, you can group together users who read several of the same blogs. From this information, you identify the most popular blogs that are read by that group. Then — for a particular user in the group — you recommend the most popular blog that he or she neither reads nor subscribes to. 
-
-The class of collaborative filtering algorithms is divided into two sub-categories that are generally called 
+Also, there are Hybrid recommender systems, which combine various mechanisms. In terms of implementing recommender systems, there are 2 types: 
 * memory based 
 * model based approaches.
 
 > In memory-based approaches, we use the entire user-item dataset to generate a recommendation system. It uses statistical techniques to approximate users or items. Examples of these techniques include: Pearson Correlation, Cosine Similarity and Euclidean Distance, among others.
 
 > In model-based approaches, a model of users is developed in an attempt to learn their preferences. Models can be created using Machine Learning techniques like regression, clustering, classification, and so on. 
+
+
+## Collaborative filtering methods
+
+Collaborative filtering is based on a user saying, “Tell me what's popular among my neighbors because I might like it too.” Collaborative filtering techniques find similar groups of users, and provide recommendations based on similar tastes within that group. In short, it assumes that a user might be interested in what similar users are interested in. 
+For example, suppose you're building a website to recommend blogs. By using the information from many users who subscribe to and read blogs, you can group those users based on their preferences. For example, you can group together users who read several of the same blogs. From this information, you identify the most popular blogs that are read by that group. Then — for a particular user in the group — you recommend the most popular blog that he or she neither reads nor subscribes to. 
+
+
+
+
+
+### References
+
+* https://www.coursera.org/learn/machine-learning-with-python 
+* https://www.ibm.com/developerworks/library/os-recommender1/index.html
+* https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada
+
