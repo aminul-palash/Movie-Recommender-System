@@ -34,7 +34,7 @@
   {% include "includes/navbar.html" %}
   {% endblock %}
 
-
+  <div class="wraper" style="margin-left: 50px; margin-right: 50px;"> 
   <div class="ml-container" style="display: block;">
 
     <center>
@@ -50,53 +50,46 @@
   </div>
 
 
-{% if movie_list %}
-<div class="content">
-	<div class="row">
+  {% if movie_list %}
+
+  <div class="row">
     {% for data in movie_list %}
-		<div class="col-sm-4">
-			<div class="card">
-				<div class="card-header card-header-success">
-					<h4 class="card-title ">{{ data }}
-                        <a href="" target="_blank" class="btn btn-danger btn-sm float-right">Trailer</a>
-                    </h4>
-				</div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header card-header-success">
+          <h4 class="card-title ">{{ data }}
+            <a href="" target="_blank" class="btn btn-danger btn-sm float-right">Trailer</a>
+          </h4>
         </div>
-        </div>
-        {% endfor %}
+      </div>
     </div>
-</div>
-
-
-
-
-{% endif %} 
-
-
-
-
-
-
-
-
-
-  <div id="loader" class="text-center">
+    {% endfor %}
   </div>
+  {% endif %}
 
-  <div class="fail">
-    <center>
-      <h3>Sorry! The movie you requested is not in our database.
-        Please check the spelling or try with other movies!</h3>
-    </center>
-  </div>
+  {% block detail %}
+  {% include "includes/movie_detail.html" %}
+  {% endblock %}
 
-  <div class="results">
-    <center>
-      <h2 id="name" class="text-uppercase"></h2>
-    </center>
-  </div>
+  {% block cast %}
+  {% include "includes/top_billed_cast.html" %}
+  {% endblock %}
 
-  <div class="footer" style="">Made with<span style="font-size:150%;color:red;"> &hearts; </span>by</div>
+  {% block recommend %}
+  {% include "includes/recommend.html" %}
+  {% endblock %}
+
+
+
+
+
+
+</div> <!--warper-->
+
+
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
 

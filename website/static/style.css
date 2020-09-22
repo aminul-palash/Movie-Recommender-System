@@ -177,11 +177,7 @@ h6 {
 
 }
 
-.poster{
-    -webkit-box-shadow: 0px 1px 15px 4px rgba(250,250,250,1);
-    -moz-box-shadow: 0px 1px 15px 4px rgba(250,250,250,1);
-    box-shadow: 0px 1px 15px 4px rgba(250,250,250,1);
-}
+
 
 .card:hover {
 	cursor: pointer;
@@ -247,4 +243,98 @@ h6 {
 .fail {
 	display: none;
 	color: white;
+}
+
+
+ol.people .profile {
+		list-style: none;
+		float: left;
+		padding: 8px 30px;
+		
+}
+ol.people .profile p{
+   margin: 0;
+}
+
+ol.people  .character {
+	 font-size: 12px;
+	 margin:0;
+	 color: darkcyan;
+}
+
+
+
+
+div.scroller_wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+div.scroller_wrap  ol.people.scroller {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+div.scroller_wrap  ol.people li.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 4px;
+    border: 1px solid rgba(var(--lightGrey), 1);
+    padding-bottom: 10px;
+    border-radius: var(--imageBorderRadius);
+	overflow: hidden;
+	float: left;
+}
+div.scroller_wrap  ol.people li {
+    min-width: 140px;
+    width: 140px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+div.scroller_wrap  ol.people {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+        margin-top: 0px;
+        margin-left: 0px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+div.scroller_wrap  ol.people li > a {
+    min-width: 138px;
+    width: 138px;
+    height: 175px;
+	display: block;
+	color: #000;
+}
+div.scroller_wrap  ol.people .profile {
+	list-style: none;
+	float: left;
+	padding: 0px;
+	
+}
+
+div.scroller {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+section.recommendations div.scroller div.item {
+    display: inline-block;
+    float: none;
+}
+div.item.mini.backdrop {
+    width: 250px;
+    margin: 0 15px 0 0;
 }
