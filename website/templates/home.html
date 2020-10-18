@@ -50,22 +50,10 @@
   </div>
 
 
-  {% if movie_list %}
+  {% if config %}
 
-  <div class="row">
-    {% for data in movie_list %}
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-header card-header-success">
-          <h4 class="card-title ">{{ data }}
-            <a href="" target="_blank" class="btn btn-danger btn-sm float-right">Trailer</a>
-          </h4>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
+  
+  
 
   {% block detail %}
   {% include "includes/movie_detail.html" %}
@@ -79,7 +67,7 @@
   {% include "includes/recommend.html" %}
   {% endblock %}
 
-
+  {% endif %}
 
 
 
