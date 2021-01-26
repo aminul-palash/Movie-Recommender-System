@@ -1,28 +1,27 @@
 {% load static %}
 
+
+
+
+
 <section class="panel recommendations scroller" style="padding-bottom: 50px;">
     <div id="recommendation_waypoint" >
-        <h3 style="color: blanchedalmond; padding-bottom: 20px;">Recommendations</h3>
+        <h3 style="color: blanchedalmond; padding-bottom: 20px; font-family: 'Noto Sans JP', sans-serif;">Recommendations</h3>
         <div id="recommendation_scroller" class="scroller_wrap should_fade is_fading">
-            <div class="scroller">
-
+            {% if recommended_movies %}
+            <div class="scroller">    
+                {% for item in recommended_movies %}
                 <div class="item mini backdrop mini_card">
-                    <div class="image_content">
+                    <div class="image_content" >
                         <a href="/movie/539885" title="Ava" alt="Ava">
 
 
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/hP1BYEj0uukHcYyKPxaRjI4GBOe.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/hP1BYEj0uukHcYyKPxaRjI4GBOe.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/hP1BYEj0uukHcYyKPxaRjI4GBOe.jpg 2x"
-                                alt="Ava" src="//image.tmdb.org/t/p/w250_and_h141_face/hP1BYEj0uukHcYyKPxaRjI4GBOe.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/hP1BYEj0uukHcYyKPxaRjI4GBOe.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/hP1BYEj0uukHcYyKPxaRjI4GBOe.jpg 2x"
-                                data-loaded="true">
-
-
+                            <img width="200" height="250" 
+                              src="//image.tmdb.org/t/p/w300_and_h450_bestv2{{ item.poster_path }}">
 
                             <div class="meta">
                                 <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    08/06/2020</span>
+                                    {{ item.release_date }}</span>
                                 <span>
 
                                 </span>
@@ -30,234 +29,17 @@
                         </a>
                     </div>
                     <p class="movie flex">
-                        <a class="title" href="/movie/539885" title="Ava" alt="Ava"><bdi>Ava</bdi></a>
-                        <span class="vote_average">60%</span>
+                        <a class="title" href="/movie/539885" title="Ava" alt="Ava"><bdi>{{ item.title }}</bdi></a>
+                       
                     </p>
                 </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/605116" title="Project Power" alt="Project Power">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg 2x"
-                                alt="Project Power"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    08/14/2020</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/605116" title="Project Power" alt="Project Power"><bdi>Project
-                                Power</bdi></a>
-                        <span class="vote_average">67%</span>
-                    </p>
-                </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/499932" title="The Devil All the Time" alt="The Devil All the Time">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/rUeqBuNDR9zN6vZV9kpEFMtQm0E.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/rUeqBuNDR9zN6vZV9kpEFMtQm0E.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/rUeqBuNDR9zN6vZV9kpEFMtQm0E.jpg 2x"
-                                alt="The Devil All the Time"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/rUeqBuNDR9zN6vZV9kpEFMtQm0E.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/rUeqBuNDR9zN6vZV9kpEFMtQm0E.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/rUeqBuNDR9zN6vZV9kpEFMtQm0E.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    09/11/2020</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/499932" title="The Devil All the Time"
-                            alt="The Devil All the Time"><bdi>The Devil All the Time</bdi></a>
-                        <span class="vote_average">74%</span>
-                    </p>
-                </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/547016" title="The Old Guard" alt="The Old Guard">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg 2x"
-                                alt="The Old Guard"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/m0ObOaJBerZ3Unc74l471ar8Iiy.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    07/10/2020</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/547016" title="The Old Guard" alt="The Old Guard"><bdi>The Old
-                                Guard</bdi></a>
-                        <span class="vote_average">73%</span>
-                    </p>
-                </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/581392" title="Peninsula" alt="Peninsula">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg 2x"
-                                alt="Peninsula"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    07/15/2020</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/581392" title="Peninsula" alt="Peninsula"><bdi>Peninsula</bdi></a>
-                        <span class="vote_average">71%</span>
-                    </p>
-                </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/570670" title="The Invisible Man" alt="The Invisible Man">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg 2x"
-                                alt="The Invisible Man"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/uZMZyvarQuXLRqf3xdpdMqzdtjb.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    02/26/2020</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/570670" title="The Invisible Man" alt="The Invisible Man"><bdi>The
-                                Invisible Man</bdi></a>
-                        <span class="vote_average">72%</span>
-                    </p>
-                </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/495764"
-                            title="Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"
-                            alt="Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg 2x"
-                                alt="Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/9xNOiv6DZZjH7ABoUUDP0ZynouU.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    02/05/2020</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/495764"
-                            title="Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"
-                            alt="Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)"><bdi>Birds of
-                                Prey (and the Fantabulous Emancipation of One Harley Quinn)</bdi></a>
-                        <span class="vote_average">72%</span>
-                    </p>
-                </div>
-
-                <div class="item mini backdrop mini_card">
-                    <div class="image_content">
-                        <a href="/movie/458897" title="Charlie's Angels" alt="Charlie's Angels">
-
-
-                            <img class="backdrop lazyload lazyloaded"
-                                data-src="//image.tmdb.org/t/p/w250_and_h141_face/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg"
-                                data-srcset="//image.tmdb.org/t/p/w250_and_h141_face/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg 2x"
-                                alt="Charlie's Angels"
-                                src="//image.tmdb.org/t/p/w250_and_h141_face/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg"
-                                srcset="//image.tmdb.org/t/p/w250_and_h141_face/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg 1x, //image.tmdb.org/t/p/w500_and_h282_face/a0xTB1vBxMGt6LGG4N7k1wO9lfL.jpg 2x"
-                                data-loaded="true">
-
-
-
-                            <div class="meta">
-                                <span class="release_date"><span class="glyphicons_v2 calendar"></span>
-                                    11/14/2019</span>
-                                <span>
-
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="movie flex">
-                        <a class="title" href="/movie/458897" title="Charlie's Angels"
-                            alt="Charlie's Angels"><bdi>Charlie's Angels</bdi></a>
-                        <span class="vote_average">67%</span>
-                    </p>
-                </div>
-
-
+                {% endfor %}
             </div>
+                {% else %}
+                    <h3 style="color: rgb(190, 22, 22);text-align: center;"> Sorry, no recommendation_scroller in this list. I'm working on it. 😃 </h3>
+                {% endif %}
         </div>
 
-
 </section>
+
+    

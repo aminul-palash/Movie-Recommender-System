@@ -37,10 +37,13 @@ def get_cast(movie_id):
     
 
 def get_trailer(movie_id):
-    p = 'https://api.themoviedb.org/3/movie/'+movie_id+'/videos?api_key=41f7cc5e1134d127a09413c900d5f199'
-    r = requests.get(url = p) 
-    con = r.json() 
-    return 'https://www.youtube.com/watch?v=' + con['results'][0]['key']
+    try:
+        p = 'https://api.themoviedb.org/3/movie/'+movie_id+'/videos?api_key=41f7cc5e1134d127a09413c900d5f199'
+        r = requests.get(url = p) 
+        con = r.json() 
+        return 'https://www.youtube.com/watch?v=' + con['results'][0]['key']
+    except:
+        return None
 
 def get_genres(movie_id):
     
@@ -59,6 +62,7 @@ class index(TemplateView):
     def __init__(self):
         self.movie_name = ''
         self. movie_list = {}
+        
     def get(self,request):
         return render(request, 'home.html',{'movie_list':self.movie_list})
 
@@ -84,12 +88,47 @@ class index(TemplateView):
             'trailer':trailer,
             'cast':cast,
         }
-        # if self.movie_list != '':
-        #     try:
-        #         self. movie_list = rcmd(self.movie_name)
-        #     except:
-        #         pass
-        return render(request, 'home.html',{'config':config})
+        if self.movie_list != '':
+            # try:
+                self. movie_list = rcmd(self.movie_name)
+                print(self. movie_list)
+                recommended_movies = []
+                data={}
+                print(type(self. movie_list))
+                if self.movie_list !=None:
+                    for i in self.movie_list:
+                        # print(i)
+                        r = requests.get(url = api_url, params = {'query':i} ) 
+                        item = r.json() 
+                        # print(item,"===================================")
+                        try:
+                            movie_id = str(item['results'][0]['id'])
+                        except:
+                            continue
+                        genres,runtime = get_genres(movie_id)
+                        
+                        trailer = get_trailer(movie_id)
+                        cast = get_cast(movie_id)
+                        
+                        data = {
+                                    'title':item['results'][0]['title'],
+                                    'poster_path':item['results'][0]['poster_path'],
+                                    'overview':item['results'][0]['overview'],
+                                    'release_date':item['results'][0]['release_date'].split('-')[0],
+                                    'genres':genres,
+                                    'runtime':runtime,
+                                    'trailer':trailer,
+                                    'cast':cast,
+                                }
+                        recommended_movies.append(data)
+                        data = {}
+                    print(recommended_movies)
+                
+                    
+
+            # except:
+            #     pass
+        return render(request, 'home.html',{'config':config,'recommended_movies':recommended_movies})
 
 
 
@@ -98,7 +137,8 @@ def rcmd(m):
     m = m.lower()
     movies_df.head()
     similarity.shape
-    
+    # if len(data[data['title']==m])!=1:
+
     if m not in movies_df['title'].unique():
         pass
     else:
